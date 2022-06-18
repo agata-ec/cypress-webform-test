@@ -1,4 +1,3 @@
-//const neatCSV = require('neat-csv')
 const path = require('path')
 
 describe('form input testing for 2i', () => {
@@ -60,8 +59,6 @@ describe('form input testing for 2i', () => {
       .then((data) => {
         cy.task('csvToJson', data).then((data) => { // call custom CSV to JSON parser
           
-          //cy.log(JSON.stringify(data[0]))
-          //cy.log(data[0].firstName)
           // visit test form
           cy.visit('http://localhost:3000/form.html')
 
@@ -94,12 +91,6 @@ describe('form input testing for 2i', () => {
 
   it('Form will not submit when missing first name', function() {
     cy.visit('http://localhost:3000/form.html')
-
-    /*    
-    cy.get('input[name=first_name]')
-      .type(this.testUser.firstName)
-      .should('have.value', this.testUser.firstName)
-    */
 
     cy.get('input[name=surname]')
       .type(this.testUser.lastName)
