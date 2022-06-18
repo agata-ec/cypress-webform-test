@@ -62,7 +62,6 @@ describe('form input testing for 2i', () => {
           
           //cy.log(JSON.stringify(data[0]))
           //cy.log(data[0].firstName)
-          //cy.log(data[0].firstName)
           // visit test form
           cy.visit('http://localhost:3000/form.html')
 
